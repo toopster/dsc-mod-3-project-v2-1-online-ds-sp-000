@@ -1,4 +1,5 @@
-# Module 3 Final Project - Predicting the Condition of Waterpoints in Tanzania
+# Module 3 Final Project - 
+# Predicting the Condition of Waterpoints in Tanzania
 
 ## Business Case
 
