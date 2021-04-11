@@ -75,7 +75,7 @@ As outlined in the [Jupyter Notebook](index.ipynb) included in this repository, 
 
 3. The creation, refinement through iteration, validation and evaluation of **[Ternary Classifier Models](index.pynb#modelling)** that predict the functional status of the waterpoints contained within the `test-set-values.csv` dataset.
 
-4. The creation of a [function](index.pynb#competition-submission-file) that preprocesses the `test-set-values.csv` waterpoint data and that outputs a submission file for the competition based on the supplied classifier model. 
+4. The creation of a **[Submission Function](index.pynb#competition-submission-file)** that preprocesses the `test-set-values.csv` waterpoint data and that outputs a submission file for the competition based on the supplied classifier model. 
 
 
 ## Conclusions
