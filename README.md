@@ -7,6 +7,8 @@ Did you know 2.2 billion people globally do not have safely managed drinking wat
 Water is an essential of life, yet millions around the world still don’t have access to clean water. 
 One of the most common causes of death in the developing world is drinking dirty and diseased water.
 
+![Collecting Water Supplies in Tanzania](images/collecting-water-in-tanzania.jpeg)
+
 Tanzania has a water and sanitation crisis. Only 60% of the population of 61 million have access to
 an improved source of safe water (protected from contamination), and 34% of the population has access to improved sanitation. 
 The demand for both water and sanitation is high.
@@ -51,11 +53,15 @@ regional_choropleth.html
         their functional status.   
 
 └── submission-data 
+          
+        # Data files containing the predicted status of the waterpoints in the correct
+        submission format for the competition.
 
 └── other-data
 
         tanzania-regions.geojson
-        # GeoJSON file containing shape data for the administrative regions within Tanzania for use in the choropleth.
+        # GeoJSON file containing shape data for the administrative regions within Tanzania
+        for use in the choropleth.
 
 
 
@@ -69,7 +75,7 @@ As outlined in the [Jupyter Notebook](index.ipynb) included in this repository, 
 
 2. Initial **[Exploratory Data Analysis](index.pynb#eda)** to review and validate the data fields available in both the `training-set-values.csv` and `training-set-labels.csv` datasets, understand each feature, the quality of the data and their relationships both with each other and with the target variable, `status_group`.  The notebook contains several visualisations that are used in the [non-technical presentation](presentation.pdf) but also a choropleth map showing regional variations throughout Tanzania of the percentage of functional waterpoints.  Unfortunately the map does not appear inline within the notebook but in a [separate file](regional_choropleth.html).
 
-![Percentage Distribution of Waterpoints by Functional Status](percentage-distribution-of-waterpoints-by-functional-status.png)
+![Percentage Distribution of Waterpoints by Functional Status](images/percentage-distribution-of-waterpoints-by-functional-status.png)
 
 3. The creation, refinement through iteration, validation and evaluation of **[Ternary Classifier Models](index.pynb#modelling)** that predict the functional status of the waterpoints contained within the `test-set-values.csv` dataset.
 
@@ -78,8 +84,13 @@ As outlined in the [Jupyter Notebook](index.ipynb) included in this repository, 
 
 ## Conclusions
 
+The [Jupyter Notebook](index.ipynb#modelling) contains the details of each classifier using different machine learning techniques to improve the overall accuracy of predicted values.
 
+It was potentially unnecessary to use quite so many different machine learning techniques to create the predictive classifer. It was nonetheless interesting to observe and compare the different accuracy scores obtain against the overall efficiency / time taken to execute each classifier.
 
+In a many instances, the data fields provided are either direct duplicates of other fields or provide the same information as other fields but in greater detail.
+
+By dropping the more detailed data fields, converting key data such as construction year into appropriate categorical variables and through an iterative, but not exhaustive, process of elimination, we have arrived at a list of the following features that achieve an optimal accuracy score for the classifier.
 
 
 ## Requisite Python Libraries
@@ -96,3 +107,4 @@ The following python libraries have been used as part of this project:
 * [scikit-learn](https://scikit-learn.org/)
 * [statsmodels](https://www.statsmodels.org/stable/index.html)
 * [SciPy](https://www.scipy.org/)
+* [XGBoost](https://xgboost.readthedocs.io/en/latest/)
