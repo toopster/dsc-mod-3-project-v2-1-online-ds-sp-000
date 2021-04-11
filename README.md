@@ -16,6 +16,12 @@ The demand for both water and sanitation is high.
 Water wells provide clean water for years. In rural areas, they are a lifeline for the inhabitants as
 this may be the only source of potable water.
 
+Since 2007, the government of Tanzania has been implementing a Water Sector Development Programme at a cost of around $300 billion USD.
+
+Non-functioning waterpoints force communities to rely on unsafe sources of water, often several kilometres away, affecting not just health but education too.
+
+![Improving Waterpoints in Tanzania](images/improved-waterpoint-in-tanzania.jpeg)
+
 Using data from Taarifa and the Tanzanian Ministry of Water, can you predict which pumps are functional, 
 which need some repairs, and which don't work at all? This is an intermediate-level practice competition. 
 Predict one of these three classes based on a number of variables about what kind of pump is operating, 
@@ -33,10 +39,10 @@ index.ipynb
 with improving accuracy, that aim to predict the condition of the waterpoints.
 
 presentation.pdf        
-# A non-technical presentation of the project findings
+# A non-technical presentation of the project findings.
 
 regional_choropleth.html
-# 
+# Choropleth map highlighting regional variations in the percentage of functional waterpoints throughout Tanzania.
 
 └── source-data 
 
@@ -63,6 +69,7 @@ regional_choropleth.html
         # GeoJSON file containing shape data for the administrative regions within Tanzania
         for use in the choropleth.
 
+└── other-data
 
 
 ```
