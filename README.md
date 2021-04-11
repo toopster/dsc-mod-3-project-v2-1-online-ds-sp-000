@@ -1,6 +1,6 @@
 # Module 3 Final Project - Predicting the Condition of Waterpoints in Tanzania
 
-## Business Case and Brief
+## Business Case
 
 Did you know 2.2 billion people globally do not have safely managed drinking water services?
 
@@ -22,6 +22,8 @@ Non-functioning waterpoints force communities to rely on unsafe sources of water
 
 ![Improving Waterpoints in Tanzania](images/improved-waterpoint-in-tanzania.jpeg)
 
+### Brief
+
 Using data from Taarifa and the Tanzanian Ministry of Water, can you predict which pumps are functional, 
 which need some repairs, and which don't work at all? This is an intermediate-level practice competition. 
 Predict one of these three classes based on a number of variables about what kind of pump is operating, 
@@ -42,7 +44,8 @@ presentation.pdf
 # A non-technical presentation of the project findings.
 
 regional_choropleth.html
-# Choropleth map highlighting regional variations in the percentage of functional waterpoints throughout Tanzania.
+# Choropleth map highlighting regional variations in the percentage of functional
+waterpoints throughout Tanzania.
 
 └── source-data 
 
@@ -69,7 +72,7 @@ regional_choropleth.html
         # GeoJSON file containing shape data for the administrative regions within Tanzania
         for use in the choropleth.
 
-└── other-data
+└── images
 
 
 ```
@@ -108,7 +111,7 @@ The following python libraries have been used as part of this project:
 * [NumPy](https://numpy.org/)
 * [Seaborn](https://seaborn.pydata.org/)
 * [Matplotlib](https://matplotlib.org/)
-* [Squarify](https://github.com/laserson/squarify)
+* [Squarify](https://github.com/laserson/squarify) (`pip install squarify` to install)
 * [Folium](https://python-visualization.github.io/folium/)
 * [JSON](https://docs.python.org/3/library/json.html)
 * [scikit-learn](https://scikit-learn.org/)
