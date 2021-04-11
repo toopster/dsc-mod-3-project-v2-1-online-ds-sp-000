@@ -1,7 +1,7 @@
 # Module 3 Final Project - Predicting the Condition of Waterpoints in Tanzania
 
 
-## Overview of the Repository
+## Overview
 ```
 index.ipynb             
 # Jupyter notebook containing code for data discovery, EDA and a number of models, 
@@ -60,37 +60,27 @@ maintenance operations and ensure that clean, potable water is available to comm
 
 The goal is to predict the operating condition of a waterpoint for each record in the dataset.
 
+This is also an [active competition](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/23/) and classifier results can be submitted and compared against the work of over 11,000 other competitors.
+
 
 ## Approach
 
-As outlined in the [Jupyter Notebook](index.ipynb) included in this repository, the approach constituted two main parts:
+As outlined in the [Jupyter Notebook](index.ipynb) included in this repository, the approach constituted four main parts:
 
-1. Initial **Exploratory Data Analysis** to review and validate the data fields available in the `training-set-values.csv` dataset and understand each feature and their relationships both with each other and with the target variable, `price`.  The notebook contains several visualisations that are used in the [non-technical presentation](presentation.pdf) but also a choropleth map of average house price by zipcode.  Unfortunately the map does not appear inline within the notebook but in a [separate file](zipcode_choropleth.html).
+1. The **[Business Case and Project Purpose](index.pynb#business-case)**.
 
-![Average House Prices in King County 2014-15 by Zip Code](house-price-choropleth.png)
+2. Initial **[Exploratory Data Analysis](index.pynb#eda)** to review and validate the data fields available in both the `training-set-values.csv` and `training-set-labels.csv` datasets, understand each feature, the quality of the data and their relationships both with each other and with the target variable, `status_group`.  The notebook contains several visualisations that are used in the [non-technical presentation](presentation.pdf) but also a choropleth map showing regional variations throughout Tanzania of the percentage of functional waterpoints.  Unfortunately the map does not appear inline within the notebook but in a [separate file](regional_choropleth.html).
 
-![Number of House Sales in King County 2014-15 by Zip Code](number-of-house-sales-by-zipcode.png)
+![Percentage Distribution of Waterpoints by Functional Status](percentage-distribution-of-waterpoints-by-functional-status.png)
 
-2. The creation, refinement through iteration, validation and evaluation of a **Multivariate Linear Regression Model** including the use of stepwise feature selection, that highlights the influencing features and creates a prediction model for house prices in King County.
+3. The creation, refinement through iteration, validation and evaluation of **[Ternary Classifier Models](index.pynb#modelling)** that predict the functional status of the waterpoints contained within the `test-set-values.csv` dataset.
+
+4. The creation of a [function](index.pynb#competition-submission-file) that preprocesses the `test-set-values.csv` waterpoint data and that outputs a submission file for the competition based on the supplied classifier model. 
 
 
 ## Conclusions
 
-The [Jupyter Notebook](index.ipynb#linear-regression) contains the details of each iteration of the linear regression model.  It was possible to create a [multivariate linear regression model](index.ipynb#model-v10) that, at first glance, produced a good predictive model with an R-Squared value of **0.843**.  However, on closer inspection, p-values for certain predictors are above 0.05 and therefore are not within acceptable bounds and the Jarque-Bera test score is too high suggesting that the distribution of residuals is not normal thereby not meeting one of the assumptions of linear regression.
 
-After using [stepwise feature selection](index.ipynb#model-v11) and a more [manual approach](index.ipynb#model-v12) to refine the model further a satisfactory model was achieved with a R-Squared value of **0.559** but that had all predictors with p-values less than 0.05 and has a JB test score of **5.853**.
-
-This final model was evaluated using both [train-test split](index.ipynb#model-evaluation-train-test-split) and [cross validation](index.ipynb#model-evaluation-cross-validation) with acceptable results.
-
-The model shows the following impact on house prices in King County.
-
-House prices tend to increase with increases in:
-* Living Space (but this fluctuates between zip codes)
-* Location (Waterfront)
-* View
-
-House prices tend to decrease with increases in:
-* Lot Space
 
 
 
@@ -102,7 +92,7 @@ The following python libraries have been used as part of this project:
 * [NumPy](https://numpy.org/)
 * [Seaborn](https://seaborn.pydata.org/)
 * [Matplotlib](https://matplotlib.org/)
-* [datetime](https://docs.python.org/3/library/datetime.html)
+* [Squarify](https://github.com/laserson/squarify)
 * [Folium](https://python-visualization.github.io/folium/)
 * [JSON](https://docs.python.org/3/library/json.html)
 * [scikit-learn](https://scikit-learn.org/)
