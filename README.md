@@ -2,7 +2,7 @@
 
 ## Business Case
 
-Did you know 2.2 billion people globally do not have safely managed drinking water services?
+**Did you know 2.2 billion people globally do not have safely managed drinking water services?**
 
 Water is an essential of life, yet millions around the world still don’t have access to clean water. 
 One of the most common causes of death in the developing world is drinking dirty and diseased water.
@@ -37,8 +37,8 @@ This is also an [active competition](https://www.drivendata.org/competitions/7/p
 ## Repository Overview
 ```
 index.ipynb             
-# Jupyter notebook containing code for data discovery, EDA and a number of models, 
-with improving accuracy, that aim to predict the condition of the waterpoints.
+# Jupyter notebook containing code for data discovery, EDA and a number of classifer 
+models, with improving accuracy, that aim to predict the condition of the waterpoints.
 
 presentation.pdf        
 # A non-technical presentation of the project findings.
