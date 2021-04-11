@@ -4,7 +4,9 @@
 ## Overview of the Repository
 ```
 index.ipynb             
-# Jupyter notebook containing code for data discovery, EDA and a number of models, with improving accuracy, that aim to predict the condition of the waterpoints.
+# Jupyter notebook containing code for data discovery, EDA and 
+a number of models, with improving accuracy, that aim to predict 
+the condition of the waterpoints.
 
 presentation.pdf        
 # A non-technical presentation of the project findings
@@ -13,54 +15,11 @@ regional_choropleth.html
 # 
 
 └── source-data 
-
-        training-set-values.csv                 
-        # Raw "training" dataset of 59,400 Tanzanian waterpoints containing the following information for each waterpoint:
-            * id
-            * amount_tsh
-            * date_recorded
-            * funder
-            * gps_height
-            * installer
-            * longitude
-            * latitude
-            * wpt_name
-            * num_private
-            * basin
-            * subvillage
-            * region
-            * region_code
-            * district_code
-            * lga
-            * ward
-            * population
-            * public_meeting
-            * recorded_by
-            * scheme_management
-            * scheme_name
-            * permit
-            * construction_year
-            * extraction_type
-            * extraction_type_group
-            * extraction_type_class
-            * management
-            * management_group
-            * payment
-            * payment_type
-            * water_quality
-            * quality_group
-            * quantity
-            * quantity_group
-            * source
-            * source_type
-            * source_class
-            * waterpoint_type
-            * waterpoint_type_group
-
-        training-set-labels.csv
-        # Raw "training" labels, denoting the functional status of the Tanzania waterpoints, corresponding to the waterpoint data provided in `training-set-values.csv`
-        
-        test-set-values.csv                 
+    ├── training-set-values.csv                 
+        # Raw "training" dataset of 59,400 Tanzanian waterpoints.
+    ├── training-set-labels.csv
+        # Raw "training" labels, denoting the functional status of the Tanzania waterpoints, corresponding to the waterpoint data provided in `training-set-values.csv`    
+    ├── test-set-values.csv                 
         # Raw "test" dataset of Tanzanian waterpoints         
 
 └── other-data
