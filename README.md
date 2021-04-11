@@ -1,7 +1,30 @@
 # Module 3 Final Project - Predicting the Condition of Waterpoints in Tanzania
 
+## Business Case and Brief
 
-## Overview
+Did you know 2.2 billion people globally do not have safely managed drinking water services?
+
+Water is an essential of life, yet millions around the world still don’t have access to clean water. 
+One of the most common causes of death in the developing world is drinking dirty and diseased water.
+
+Tanzania has a water and sanitation crisis. Only 60% of the population of 61 million have access to
+an improved source of safe water (protected from contamination), and 34% of the population has access to improved sanitation. 
+The demand for both water and sanitation is high.
+
+Water wells provide clean water for years. In rural areas, they are a lifeline for the inhabitants as
+this may be the only source of potable water.
+
+Using data from Taarifa and the Tanzanian Ministry of Water, can you predict which pumps are functional, 
+which need some repairs, and which don't work at all? This is an intermediate-level practice competition. 
+Predict one of these three classes based on a number of variables about what kind of pump is operating, 
+when it was installed, and how it is managed. A smart understanding of which waterpoints will fail can improve 
+maintenance operations and ensure that clean, potable water is available to communities across Tanzania.
+
+The goal is to predict the operating condition of a waterpoint for each record in the dataset.
+
+This is also an [active competition](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/23/) and classifier results can be submitted and compared against the work of over 11,000 other competitors.
+
+## Repository Overview
 ```
 index.ipynb             
 # Jupyter notebook containing code for data discovery, EDA and a number of models, 
@@ -37,31 +60,6 @@ regional_choropleth.html
 
 
 ```
-
-## Business Case and Brief
-
-Did you know 2.2 billion people globally do not have safely managed drinking water services?
-
-Water is an essential of life, yet millions around the world still don’t have access to clean water. 
-One of the most common causes of death in the developing world is drinking dirty and diseased water.
-
-Tanzania has a water and sanitation crisis. Only 60% of the population of 61 million have access to
-an improved source of safe water (protected from contamination), and 34% of the population has access to improved sanitation. 
-The demand for both water and sanitation is high.
-
-Water wells provide clean water for years. In rural areas, they are a lifeline for the inhabitants as
-this may be the only source of potable water.
-
-Using data from Taarifa and the Tanzanian Ministry of Water, can you predict which pumps are functional, 
-which need some repairs, and which don't work at all? This is an intermediate-level practice competition. 
-Predict one of these three classes based on a number of variables about what kind of pump is operating, 
-when it was installed, and how it is managed. A smart understanding of which waterpoints will fail can improve 
-maintenance operations and ensure that clean, potable water is available to communities across Tanzania.
-
-The goal is to predict the operating condition of a waterpoint for each record in the dataset.
-
-This is also an [active competition](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/23/) and classifier results can be submitted and compared against the work of over 11,000 other competitors.
-
 
 ## Approach
 
